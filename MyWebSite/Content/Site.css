@@ -1,10 +1,9 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 20px;
-    background-color: #142e56;
+    background-color: #101111;
 }
 
-body p, body h2 {
+body p, body h2, body h1 {
     color: aliceblue;
 }
 
@@ -12,7 +11,7 @@ body p, body h2 {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #224984;
+    background-color: #53575e;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -29,8 +28,15 @@ textarea {
     max-width: 280px;
 }
 
-#backgroundautosize {
-    height:auto;
-    width:100%;
+.dropdown-menu {
+    background-color: #343A40;
+}
+
+.dropdown-item {
+    color: aliceblue;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #53575E;
 }
 

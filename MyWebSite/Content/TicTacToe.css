@@ -1,12 +1,15 @@
-﻿body {
-}
-
-table {
-    width: 100%;
+﻿table {
+    width: 50%;
+    align-content: center;
 }
 
 td {
     width: 33.333%;
+}
+
+td a {
+    display: block;
+    width: 100%;
 }
 
 td:after {

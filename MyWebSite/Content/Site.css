@@ -1,15 +1,18 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url('images/tron.png');
-    background-size: cover;
-    background-repeat:no-repeat;
+    background-color: #142e56;
+}
+
+body p, body h2 {
+    color: aliceblue;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    background-color: #224984;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 

@@ -1,0 +1,270 @@
+﻿@model IEnumerable<MyWebSite.Models.Course>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>These are the courses I've taken so far!</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<!--Tech Related Courses-->
+<br /><br />
+<center><h3>Tech Related Courses</h3></center>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseAcronym)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Term.TermName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseYear.Year)
+        </th>
+        <th></th>
+    </tr>
+
+    <!--This lambda expression looks for courses in specific categories and sorts them alphabetically-->
+    @foreach (var item in Model.Where(x => x.CourseAcronym.Contains("INFO") || x.CourseAcronym.Contains("IT")
+                                                                            || x.CourseAcronym.Contains("CS")
+                                                                            || x.CourseAcronym.Contains("IM")
+                                                                            ).OrderBy(y => y.CourseAcronym).ToList())
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseAcronym)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Term.TermName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseYear.Year)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<!--Table of courses in 2016-->
+<br /><br />
+<center><h3>2015</h3></center>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseAcronym)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Term.TermName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseYear.Year)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Where(x => x.CourseYear.Year.Contains("2015")))
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseAcronym)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Term.TermName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseYear.Year)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<!--Table of courses in 2016-->
+<br /><br />
+<center><h3>2016</h3></center>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseAcronym)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Term.TermName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseYear.Year)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Where(x => x.CourseYear.Year.Contains("2016")))
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseAcronym)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Term.TermName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseYear.Year)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<!--Table of courses in 2017-->
+<br /><br />
+<center><h3>2017</h3></center>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseAcronym)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Term.TermName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseYear.Year)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Where(x => x.CourseYear.Year.Contains("2017")))
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseAcronym)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Term.TermName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseYear.Year)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<!--Table of courses in 2018-->
+<br /><br />
+<center><h3>2018</h3></center>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseAcronym)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Term.TermName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseYear.Year)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Where(x => x.CourseYear.Year.Contains("2018")))
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseAcronym)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Term.TermName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseYear.Year)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
+            </td>
+        </tr>
+    }
+
+</table>

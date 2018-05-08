@@ -6,7 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
     <link href="~/Content/FooterBottom.css" rel="stylesheet" />
 
 </head>
@@ -21,6 +21,23 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
+
+                        <!--Resume link-->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="@Url.Action("Resume", "Home")">Resume</a>
+                        </li>
+
+                        <!--Classes link-->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="@Url.Action("Index", "Courses")">Courses</a>
+                        </li>
+
+                        <!--GitHub link-->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="https://github.com/IsaacYocum/MyWebsite"><i class="fa fa-github"></i> GitHub</a>
+                        </li>
+
+                        <!--Games dropdown links-->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Games
@@ -32,6 +49,8 @@
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                         </li>
+
+                        <!--Themes dropdown links-->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Themes

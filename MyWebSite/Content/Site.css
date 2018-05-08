@@ -1,17 +1,18 @@
 ﻿body {
     padding-top: 50px;
-    background-color: #101111;
+    /*background-color: #101111;*/
+    background-color: #DDDADA;
 }
 
 body p, body h2, body h1 {
-    color: aliceblue;
+    /*color: aliceblue;*/
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #53575e;
+    /*background-color: #53575e;*/
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -42,4 +43,9 @@ textarea {
 
 .backgroundcolor {
     background-color: #53575E;
+}
+
+.doc {
+    width: 100%;
+    height: 1100px;
 }

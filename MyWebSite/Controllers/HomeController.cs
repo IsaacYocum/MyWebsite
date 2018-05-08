@@ -26,5 +26,10 @@ namespace MyWebSite.Controllers
 
             return View();
         }
+
+        public ActionResult Resume()
+        {
+            return View();
+        }
     }
 }

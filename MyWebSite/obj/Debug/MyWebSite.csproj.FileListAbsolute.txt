@@ -141,3 +141,5 @@ C:\Users\isyoc\Documents\Visual Studio 2017\Projects\MyWebsite\MyWebSite\obj\Deb
 C:\Users\isyoc\Documents\Visual Studio 2017\Projects\MyWebsite\MyWebSite\obj\Debug\MyWebSite.csproj.CopyComplete
 C:\Users\isyoc\Documents\Visual Studio 2017\Projects\MyWebsite\MyWebSite\obj\Debug\MyWebSite.dll
 C:\Users\isyoc\Documents\Visual Studio 2017\Projects\MyWebsite\MyWebSite\obj\Debug\MyWebSite.pdb
+E:\Coding Practice\MyWebSite\MyWebSite\obj\Debug\MyWebSite.Migrations.InitialCreate.resources
+E:\Coding Practice\MyWebSite\MyWebSite\obj\Debug\MyWebSite.csproj.GenerateResource.Cache

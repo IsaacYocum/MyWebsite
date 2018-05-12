@@ -19,7 +19,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-collapse collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
 
                         <!--Resume link-->
@@ -62,7 +62,16 @@
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                         </li>
+
+                        <!--Roles dropdown links-->
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item active">
+                                <a class="nav-link" href="@Url.Action("Index", "Roles")">Roles</a>
+                            </li>
+                        }
                     </ul>
+                    @Html.Partial("_LoginPartial")
                 </div>
             </div>
         </nav>
@@ -72,7 +81,10 @@
             <hr />
             <div class="footer-content">
                 <footer>
-                    <p>&copy; @DateTime.Now.Year - My Website</p>
+                    <div class="container">
+                        <p>&copy; @DateTime.Now.Year - My Website</p>
+                    </div>
+
                 </footer>
             </div>
         </div>

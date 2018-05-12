@@ -4,11 +4,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>These are the courses I've taken so far!</h2>
+<h2>The college courses I've taken so far!</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@if (User.IsInRole("Admin"))
+{
+    <p>@Html.ActionLink("Create New", "Create")</p>
+}
+
 
 <!--Tech Related Courses-->
 <br /><br />
@@ -55,15 +57,19 @@
             <td>
                 @Html.DisplayFor(modelItem => item.CourseYear.Year)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
-            </td>
+
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
+                </td>
+            }
         </tr>
     }
-
 </table>
+<hr />
 
 <!--Table of courses in 2016-->
 <br /><br />
@@ -106,15 +112,19 @@
             <td>
                 @Html.DisplayFor(modelItem => item.CourseYear.Year)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
-            </td>
+
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
+                </td>
+            }
         </tr>
     }
-
 </table>
+<hr />
 
 <!--Table of courses in 2016-->
 <br /><br />
@@ -157,15 +167,19 @@
             <td>
                 @Html.DisplayFor(modelItem => item.CourseYear.Year)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
-            </td>
+
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
+                </td>
+            }
         </tr>
     }
-
 </table>
+<hr />
 
 <!--Table of courses in 2017-->
 <br /><br />
@@ -208,15 +222,19 @@
             <td>
                 @Html.DisplayFor(modelItem => item.CourseYear.Year)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
-            </td>
+
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
+                </td>
+            }
         </tr>
     }
-
 </table>
+<hr />
 
 <!--Table of courses in 2018-->
 <br /><br />
@@ -259,12 +277,15 @@
             <td>
                 @Html.DisplayFor(modelItem => item.CourseYear.Year)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
-            </td>
+
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CourseId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
+                </td>
+            }
         </tr>
     }
-
 </table>

@@ -10,6 +10,7 @@ using MyWebSite.Models;
 
 namespace MyWebSite.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CourseYearsController : Controller
     {
         private CollegeCoursesContext db = new CollegeCoursesContext();

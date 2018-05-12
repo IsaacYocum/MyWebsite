@@ -10,10 +10,12 @@ using MyWebSite.Models;
 
 namespace MyWebSite.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CoursesController : Controller
     {
         private CollegeCoursesContext db = new CollegeCoursesContext();
 
+        [AllowAnonymous]
         // GET: Courses
         public ActionResult Index()
         {

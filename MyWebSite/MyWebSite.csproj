@@ -199,6 +199,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\TermsController.cs" />
+    <Compile Include="Controllers\ThemesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -227,7 +228,11 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\FooterBottom.css" />
+    <Content Include="Content\images\Theme1\Theme1-OceanYoga.jpg" />
+    <Content Include="Content\images\Theme1\Theme1Capture.PNG" />
+    <Content Include="Content\images\Theme1\yoga-logo_1.png" />
     <Content Include="Content\images\tron.png" />
+    <Content Include="Content\Theme1.css" />
     <Content Include="Content\TicTacToe.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -349,6 +354,7 @@
     <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\Edit.cshtml" />
+    <Content Include="Views\Themes\Theme1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

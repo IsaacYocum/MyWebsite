@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Theme1.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark navbar-footer-color">
+            <div class="container">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">Isaac's Site</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+
+                        <!--Resume link-->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="@Url.Action("Resume", "Home")">Résumé</a>
+                        </li>
+
+                        <!--Classes link-->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="@Url.Action("Index", "Courses")">Courses</a>
+                        </li>
+
+                        <!--GitHub link-->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="https://github.com/IsaacYocum/MyWebsite"><i class="fa fa-github"></i> GitHub</a>
+                        </li>
+
+                        <!--LinkedIn link-->
+                        <li>
+                            <a class="nav-link" href="https://www.linkedin.com/in/isaacyocum/"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+                        </li>
+
+                        <!--Games dropdown links-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Games
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="@Url.Action("TicTacToe", "Game")">Tic Tac Toe</a>
+                                <div class="dropdown-item">Another action</div>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+
+                        <!--Themes dropdown links-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Themes
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="@Url.Action("Theme1", "Themes")">Olivia Misa</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+
+                        <!--Roles dropdown links-->
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item active">
+                                <a class="nav-link" href="@Url.Action("Index", "Roles")">Roles</a>
+                            </li>
+                        }
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </nav>
+        <div class="btn btn-outline-secondary" style="position:absolute;"><a href="https://www.weebly.com/themes/merch-theme/788085828231107131#preview" target="_blank">Original Site</a></div>
+        <div class="Theme1NavBar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-left">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <p id="Olivia">Olivia Misa</p>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <i class="fa fa-search fa-2x" style="top:50%;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Theme1-container">
+            <img src="~/Content/Images/Theme1/Theme1-OceanYoga.jpg" class="Theme1-OceanYoga" alt="OceanYoga" />
+            <div>
+                <p id="Theme1centered">
+                    PRACTICE <br /><br /><img src="~/Content/Images/Theme1/yoga-logo_1.png" /><br /><br />Be happy. Be Healthy. Be alive.
+                </p>
+            </div>
+        </div>
+        <div class="body-content">
+
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿
+img:hover {
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+/* Make the image responsive */
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Theme1 specific css*/
+.Theme1-container {
+    position: relative;
+    top: 51px;
+    text-align: center;
+}
+
+.Theme1NavBar {
+    position: relative;
+    top: 51px;
+    width: 100%;
+    height: 70px;
+    background-color: #FFF;
+}
+
+.Theme1-OceanYoga {
+    width: 100%;
+    height: auto;
+    max-height: 665px;
+}
+
+#Theme1centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    font-family: Lora, Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #F8F8F8;
+}
+
+#Olivia {
+    font-size: 2em;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}

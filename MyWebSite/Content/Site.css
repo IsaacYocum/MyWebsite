@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     /*background-color: #101111;*/
-    background-color: #DDDADA;
+    /*background-color: #DDDADA;*/
 }
 
 body p, body h2, body h1 {
@@ -30,7 +30,7 @@ textarea {
 }
 
 .dropdown-menu {
-    background-color: #343A40;
+    background-color: #0b3372;
 }
 
 .dropdown-item {
@@ -41,8 +41,9 @@ textarea {
     background-color: #53575E;
 }
 
-.backgroundcolor {
-    background-color: #53575E;
+.navbar-footer-color {
+    /*background-color: #53575E;*/
+    background-color: #0b3372;
 }
 
 .doc {
@@ -66,4 +67,15 @@ nav a:hover {
 .navbar-dark .navbar-nav .nav-link:hover {
     color: aliceblue;
     text-decoration: underline;
+}
+
+table {
+    max-width: 1170px;
+    width: 100%;
+    right: 0;
+}
+
+.div-table {
+    width: 100%;
+    max-width: 1170px;
 }
